@@ -6,7 +6,7 @@
 
 ```dotenv
 VUE_APP_FLV_PATH="http://192.168.123.101:7001"
-VUE_APP_HLV_PATH="http://192.168.123.101:7002"
+VUE_APP_HLS_PATH="http://192.168.123.101:7002"
 ```
 
 需要始终启用 `flv`，因为需要用到flv的数据（`/streams` 接口）
