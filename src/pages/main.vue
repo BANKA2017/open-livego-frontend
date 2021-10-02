@@ -76,8 +76,8 @@
                   </div>
                 </div>
               </div>
-              <div :class="{'text-center': true, 'my-2': true, 'text-white': darkMode}">
-                <span>NEST.MOE</span>
+              <div :class="{'text-center': true, 'my-2': true}">
+                <a href="https://github.com/BANKA2017/open-livego-frontend" target="_blank" :class="{'text-decoration-none': true, 'text-white': darkMode, 'text-black': !darkMode}"><i class="bi bi-github"></i> BANKA2017/open-livego-frontend </a>
               </div>
             </div>
           </template>
