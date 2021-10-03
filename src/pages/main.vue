@@ -30,7 +30,7 @@
               </router-link>
             </div>
           </template>
-          <template v-else-if="activeLive && Object.values(liveList).length">
+          <template v-else>
             <div class="col-md-8">
               <div :class="{'card': true, 'shadow-lg': true, 'border-0': true, 'mb-3': true, 'bg-dark': darkMode, 'text-white': darkMode}" v-if="!liveList[activeLive]">
                 <div class="card-body">
@@ -61,12 +61,12 @@
                   </ul>
                 </div>
               </div>
-              <a class="btn btn-primary shadow-lg mb-3 text-decoration-none d-flex" :href="'/'+liveList[activeLive].uid+'/'">
+              <a class="btn btn-primary shadow-lg mb-3 text-decoration-none d-flex" :href="$route.params.room ? '/' + $route.params.room + '/' : '/'">
                 <i class="bi bi-arrow-repeat"></i> 刷新
               </a>
               <div :class="{'card': true, 'border-0': true, 'shadow-lg': true, 'mb-3': true, 'bg-dark': darkMode, 'text-white': darkMode}" v-if="Object.values(liveList).length">
                 <div class="card-body">
-                  <div class="lead">
+                  <div class="lead mb-2">
                     直播间
                   </div>
                   <div style="background-color: white" class="rounded mb-1" v-for="(liveInfo, order) in Object.values(liveList)" :key="order">
